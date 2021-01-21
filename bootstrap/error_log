@@ -1,0 +1,16 @@
+[23-Nov-2020 06:50:09 UTC] PHP Fatal error:  Uncaught Error: Class 'Illuminate\Foundation\Application' not found in /home/rakibhstu/public_html/bootstrap/app.php:14
+Stack trace:
+#0 {main}
+  thrown in /home/rakibhstu/public_html/bootstrap/app.php on line 14
+[11-Dec-2020 05:08:28 UTC] PHP Fatal error:  Uncaught Error: Class 'Illuminate\Foundation\Application' not found in /home/rakibhstu/public_html/bootstrap/app.php:14
+Stack trace:
+#0 {main}
+  thrown in /home/rakibhstu/public_html/bootstrap/app.php on line 14
+[27-Dec-2020 17:47:36 UTC] PHP Fatal error:  Uncaught Error: Class 'Illuminate\Foundation\Application' not found in /home/rakibhstu/public_html/bootstrap/app.php:14
+Stack trace:
+#0 {main}
+  thrown in /home/rakibhstu/public_html/bootstrap/app.php on line 14
+[16-Jan-2021 11:18:31 UTC] PHP Fatal error:  Uncaught Error: Class 'Illuminate\Foundation\Application' not found in /home/rakibhstu/public_html/bootstrap/app.php:14
+Stack trace:
+#0 {main}
+  thrown in /home/rakibhstu/public_html/bootstrap/app.php on line 14
