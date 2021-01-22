@@ -5,29 +5,25 @@
 	<meta name="description" content="Md. Rakibul Islam is a passoinate Laravel and Vue.js developer. He has also experiences in core PHP, Javascript, jQuery, Mysql and wordpress.">
 	@include('includes.head')
 </head>
+
 <body class="@yield('class')">
 	<div id="app">
+
 		@include('includes.header')
 
 		@yield('banner')
+
 		<div class="main-container">
+
             @yield('content')
+
         </div>
+
         @include('includes.footer')
-
-        
-
 	</div>
-	@stack('script')
-	<script type="text/javascript">
-		function openNav() {
-		  	document.getElementById("main-menu").style.width = "250px";
-		}
 
-		function closeNav() {
-		  	document.getElementById("main-menu").style.width = "0";
-		}
-	</script>
+	@include('includes.script')
 	
+	@stack('script')
 </body>
 </html>

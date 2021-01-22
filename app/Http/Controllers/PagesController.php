@@ -52,7 +52,6 @@ class PagesController extends Controller
 
     public function getGitRepos()
     {
-        Cache::forget('git_repos');
         return Cache::remember('git_repos', 720 ,function () {
             $response = $this->client->request('GET', $this->user.'/repos?type=sources');
             if($response->getStatusCode() == 200){

@@ -13,3 +13,12 @@ const mix = require('laravel-mix');
 
 mix.js('resources/js/app.js', 'public/js')
    .sass('resources/sass/app.scss', 'public/css');
+
+mix.styles([
+    'public/plugins/font-awesome-4.7.0/css/font-awesome.min.css',
+    'public/css/github-calendar-responsive.css'
+], 'public/css/all.css');
+
+mix.scripts([
+    'public/js/github-calendar.min.js'
+], 'public/js/all.js');

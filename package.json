@@ -24,6 +24,7 @@
         "vue-template-compiler": "^2.6.10"
     },
     "dependencies": {
+        "typed.js": "^2.0.11",
         "vue-carousel": "^0.18.0",
         "vue-pdf": "^4.0.8",
         "zircle": "^1.2.5"

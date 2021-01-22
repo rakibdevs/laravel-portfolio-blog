@@ -164,13 +164,14 @@ header{
 
 
 .main-container{
-    max-width:1140px;
+    max-width:1080px;
     margin: 0 auto;
 }
 
 .author-logo img{
     height: 40px;
 }
+
 
 /*.main-menu {
     height: 100%;
@@ -279,7 +280,7 @@ section{
     text-align: center;
 }
 
-.author-photo:before {
+/*.author-photo:before {
     position: absolute;
     left: 0;
     top: -70px;
@@ -290,7 +291,7 @@ section{
     border-radius: 0 0 40% 0;
     opacity: 0.8;
     z-index: -60;
-}
+}*/
 
 .author-photo img {
     width: 280px;
@@ -820,6 +821,40 @@ ul.portfolio-tech li {
     border-radius: 5px;
 }
 
+
+.git-repo{
+    background: #fff;
+    background-image: linear-gradient(180deg,hsla(0,0%,100%,0),#fff);
+    background-color: transparent;
+    box-shadow: 0 40px 70px 0 rgba(0,0,0,.05);
+    border-radius: 5px;
+    margin: 10px 0;
+    text-align: center;
+    padding: 40px 30px;
+    transform: translateY(0);
+    transition: transform .25s ease;
+    height: 300px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: column;
+}
+
+.git-repo-parent {
+    justify-content: flex-start;
+    display: flex;
+    flex-wrap: wrap;
+    margin-bottom: 40.5px;
+    margin-top: 100px;
+}
+
+.git-repo-parent .col-sm-4{
+    position: relative;
+}
+.git-repo-parent .col-sm-4:nth-child(3n+2){
+    position: relative;
+    margin-top: -100px !important;
+}
 /*.github-insights {
     float: right;
 }*/
@@ -887,7 +922,26 @@ ul.portfolio-tech li {
 
 .f-m-mobile{
         display:none;
-    }
+}
+.skill-image-banner {
+    position: absolute;
+    top: 10%;
+    height: 500px;
+    opacity: 0.2;
+    left: -20%;
+}
+.rotate {
+  animation: rotation 16s infinite linear;
+}
+
+@keyframes rotation {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(359deg);
+  }
+}
 
 
 /*-----responsive design start-------------*/
