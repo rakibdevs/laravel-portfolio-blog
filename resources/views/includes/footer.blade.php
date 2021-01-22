@@ -1,5 +1,5 @@
 <footer>
-	<div class="main-container">
+	<div class="main-container" id="footer">
 		<div class="row">
 			
 			<div class="col-sm-4 highlight">
