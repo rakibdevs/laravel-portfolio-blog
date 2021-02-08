@@ -117,7 +117,7 @@
     height: 60px;
 }
 .wrapper .page-wrap .app-sidebar.colored .sidebar-header {
-    background-color: #272d36;
+    background-color: #f6f7fb;
 }
 .wrapper .page-wrap .app-sidebar .sidebar-content {
     position: relative;
@@ -128,7 +128,7 @@
     z-index: 4;
 }
 .wrapper .page-wrap .app-sidebar.colored .sidebar-content {
-    background-color: #404E67;
+    background-color: #f6f7fb;
 }
 .wrapper .page-wrap .app-sidebar .sidebar-content .nav-container .navigation-main .nav-item {
     position: relative;
@@ -149,7 +149,7 @@
     vertical-align: -4px;
 }
 .wrapper .page-wrap .app-sidebar.colored .sidebar-content .nav-container .navigation-main .nav-item a {
-    color: #fff;
+    color: #000;
 }
 .wrapper .page-wrap .app-sidebar .sidebar-content .nav-container .navigation-main .nav-item.active::after {
     background: #576a3d;

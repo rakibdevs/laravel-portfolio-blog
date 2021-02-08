@@ -120,25 +120,39 @@
             </div>
         </div>
     </section>
+    <pre><code class="language-css">p { color: red }</code></pre>
+    <pre><code class="language-js">var zinnah;</code></pre>
 
 
-    @push('script')
-        <script>
-            // initiate github calender
-            GitHubCalendar(".calendar", "rakibdevs", { responsive: true });
-            
-            
-            var text2 = ["Vue.js","Javascript","MySql", "Laravel"];
-            var count = 0;
-            setInterval(() => {
-                document.getElementById('text-2-span').innerHTML= text2[count];
-                count++;
-                if(count == 4){
-                    count = 0;
-                }
-            }, 7000);
-
-        </script>
-    @endpush
 @endsection
+@push('script')
+    <script>
+        // initiate github calender
+        GitHubCalendar(".calendar", "rakibdevs", { responsive: true });
+        
+        
+        var text2 = ["Vue.js","Javascript","MySql", "Laravel"];
+        var count = 0;
+        setInterval(() => {
+            document.getElementById('text-2-span').innerHTML= text2[count];
+            count++;
+            if(count == 4){
+                count = 0;
+            }
+        }, 7000);
+
+        Prism.highlightAll();
+
+
+
+
+        var typed6 = new Typed('.code-block', {
+            strings: ['npm install^1000\n `installing components...` ^1000\n `Fetching from source...`'],
+            typeSpeed: 40,
+            backSpeed: 0,
+            loop: true
+          });
+
+    </script>
+@endpush
 

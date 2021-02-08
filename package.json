@@ -24,6 +24,9 @@
         "vue-template-compiler": "^2.6.10"
     },
     "dependencies": {
+        "github-calendar": "^2.2.6",
+        "medium-editor": "^5.23.3",
+        "prismjs": "^1.23.0",
         "typed.js": "^2.0.11",
         "vue-carousel": "^0.18.0",
         "vue-pdf": "^4.0.8",

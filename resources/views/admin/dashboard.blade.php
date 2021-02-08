@@ -2,6 +2,11 @@
 
 @section('content')
 <div class="container-fluid">
-	hi
+	<div class="editable">hi</div>
 </div>
+@push('script')
+	<script type="text/javascript">
+		var editor = new MediumEditor('.editable');
+	</script>
+@endpush
 @endsection 

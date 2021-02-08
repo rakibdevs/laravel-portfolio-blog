@@ -1,4 +1,4 @@
-
+<script src="{{ asset('js/app.js') }}" ></script>
 <script src="{{ asset('js/all.js') }}"></script>
 
 <!-- Global site tag (gtag.js) - Google Analytics -->
