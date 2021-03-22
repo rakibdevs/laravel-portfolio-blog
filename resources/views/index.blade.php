@@ -114,21 +114,19 @@
                     See more open source projects here, <a href="https://github.com/RakibDevs" class="shade-bar">@rakibdevs</a>
                 </p>
             </div>
-            <div class="col-sm-8">
+            {{-- <div class="col-sm-8">
                 <div class="calendar"></div>
                 
-            </div>
+            </div> --}}
         </div>
     </section>
-    <pre><code class="language-css">p { color: red }</code></pre>
-    <pre><code class="language-js">var zinnah;</code></pre>
 
 
 @endsection
 @push('script')
     <script>
         // initiate github calender
-        GitHubCalendar(".calendar", "rakibdevs", { responsive: true });
+        //GitHubCalendar(".calendar", "rakibdevs", { responsive: true });
         
         
         var text2 = ["Vue.js","Javascript","MySql", "Laravel"];
