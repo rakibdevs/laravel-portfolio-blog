@@ -45,7 +45,7 @@ class PagesController extends Controller
     {
     	$categories = Category::get();
 
-        $git_repos = $this->getGitRepos()->take(6);
+        $git_repos = $this->getGitRepos()->take(12);
 
         return view('index', compact('categories','git_repos'));
     }
