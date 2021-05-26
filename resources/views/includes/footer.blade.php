@@ -28,7 +28,7 @@
 				<p>FOLLOW ME</p>
 				<div class="social-icons">
 				
-					<a href="https://github.com/rakibhstu" title="Find me on Github">
+					<a href="https://github.com/rakibdevs" title="Find me on Github">
 						<i class="fa fa-github" aria-hidden="true"></i>
 					</a>
 					<a href="https://bd.linkedin.com/in/rakibhstu" title="Find me on Linkedin">

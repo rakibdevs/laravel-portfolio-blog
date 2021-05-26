@@ -9,7 +9,7 @@
 
 @endpush
     <div class="main-container position-relative">
-        <div class="code-block">
+        {{-- <div class="code-block">
             
             <span class="code-red">namespace</span> <span class="code-green">App\Models;</span><br>
 
@@ -19,34 +19,44 @@
             { <br>
                 <span class="text-muted ml-4">//</span> <br>
             }
-        </div>
+        </div> --}}
     </div>
     <section class="banner">
         
         <div class="row m-0">
-            <img src="{{asset('images/skills.png')}}" class="rotate skill-image-banner">
-            <div class="col-sm-6 author-photo">
-                <img src="{{ asset('images/rakib-cartoonized.jpg')}}">
+            <div class="col-sm-5 relative">
+                <img src="{{asset('images/skills.png')}}" class="rotate skill-image-banner">
+                <div class="author-photo">
+                    <img src="{{ asset('images/rakib-cartoonized.jpg')}}">
+                </div>
 
             </div>
-            <div class="col-sm-6 author-info">
-                <span class="greetings">Hello I'm</span>
-                <h2 class="name"><b>MD. RAKIBUL ISLAM</b></h2>
-                <div class="author-tags">
-                    
-                    <div id="text-1">Skilled in </div> 
-                    <div id="text-2"> 
-                      <span id="text-2-span">Laravel</span>
+            <div class="col-sm-7 author-info">
+                <div class="row">
+                    <div class="col-sm-9">
+                        <h5 class="font-weight-bold text-justify">Hi there, I'm <span class="color-theme">Md. Rakibul Islam</span> — a full-stack web developer and Laravel expert from Dhaka, Bangladesh, with over 5 years professional experience.</h5>
+
+                        <p class="mt-4 mb-4">I'm a Software Engineer at <a href="https://mbm.group" class="font-weight-bold">MBM Group</a> where I work on <span class="shade-bar">ERP</span> with Laravel & Vue.js.</p>
+
+                        <p class="text-justify">I've worked on some pretty interesting projects, including a <a href="http://tourgeeks.rakibul.dev/">tourist social network</a>, <a href="https://codecanyon.net/item/laravel-admin-template-roles-permission-editable-datatables/26005211">Laravel kickstarter</a>, a QA community and some laravel packages.</p>
+
+                        <p class="text-justify">I'm a big believer in open-source software — I've contributed to many open-source projects and even have <a   href="https://github.com/rakibdevs">a few of my own on GitHub.</a></p>
+                        <div class="social-icons mt-3 mb-3">
+                
+                            <a href="https://github.com/rakibdevs" title="Find me on Github">
+                                <i class="fa fa-github" aria-hidden="true"></i>
+                            </a>
+                            <a href="https://bd.linkedin.com/in/rakibhstu" title="Find me on Linkedin">
+                                <i class="fa fa-linkedin" aria-hidden="true"></i>
+                            </a>
+                            <a href="https://stackoverflow.com/users/6678641/rakibul-islam" title="Find me on Stackoverflow">
+                                <i class="fa fa-stack-overflow" aria-hidden="true"></i>
+                            </a>
+                        </div>
+                        <a id="scroll-down" class="ml-3" href="#projects-preview"><span></span></a>
                     </div>
                 </div>
-                <div class="space-10"></div>
-                <h1 class="author-slogan">
-                    I want to 
-                    <span class="slogan-highlight theme-background">make things</span><br>
-                    that <u class="slogan-underline">make a difference</u>.
-                </h1>
-
-                <a href="#footer" class="mt-20 btn-theme hvr-hang">LET'S TALK</a>    
+                
             </div>
         </div>
     </section>
@@ -56,7 +66,7 @@
 @section('content')
     
 
-    <section class="projects-preview">
+    <section class="projects-preview" id="projects-preview">
         <div class="row justify-content-center mb-5" style="min-height: 400px;">
             
             <div class="col-sm-6 mt-5 mb-3">
@@ -129,7 +139,7 @@
         //GitHubCalendar(".calendar", "rakibdevs", { responsive: true });
         
         
-        var text2 = ["Vue.js","Javascript","MySql", "Laravel"];
+        /*var text2 = ["Vue.js","Javascript","MySql", "Laravel"];
         var count = 0;
         setInterval(() => {
             document.getElementById('text-2-span').innerHTML= text2[count];
@@ -137,19 +147,26 @@
             if(count == 4){
                 count = 0;
             }
-        }, 7000);
+        }, 7000);*/
 
         Prism.highlightAll();
 
+        $(function() {
+          $('#scroll-down').on('click', function(e) {
+            e.preventDefault();
+            $('html, body').animate({ scrollTop: $($(this).attr('href')).offset().top}, 500, 'linear');
+          });
+        });
 
 
 
-        var typed6 = new Typed('.code-block', {
+
+        /*var typed6 = new Typed('.code-block', {
             strings: ['npm install^1000\n `installing components...` ^1000\n `Fetching from source...`'],
             typeSpeed: 40,
             backSpeed: 0,
             loop: true
-          });
+          });*/
 
     </script>
 @endpush
