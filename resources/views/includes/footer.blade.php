@@ -4,24 +4,24 @@
 			
 			<div class="col-sm-4 highlight">
 				<div class="icon-fork icon-fork-mobile">
-					<i title="Fork this project from github!" class="fa fa-code-fork" aria-hidden="true"></i>
+					<a href="https://github.com/rakibdevs/Laravel-Portfolio-Blog"><i title="Fork this project from github!" class="fa fa-code-fork" aria-hidden="true"></i></a>
 				</div>
 				<h5 class="mt-10">HIGHLIGHTS</h5>
 				<ul class="footer-url">
-					<li><a href="">Resume</a></li>
-					<li><a href="https://codecanyon.net/item/laravel-admin-template-roles-permission-editable-datatables/26005211">Radmin - Laravel Admin Starter</a></li>
-					<li><a href="{{url('docs/number-to-bangla')}}">Number to Bangla</a></li>
-					<li><a href="">Pathology Management System</a></li>
+					<li><a href="https://rakibdevs.github.io/Radmin-Laravel-Admin-Starter-Kit/">Radmin Docs</a></li>
+					<li><a href="https://tourgeeks.rakibul.dev">Tour Geeks</a></li>
+					<li><a href="https://rakibdevs.github.io/number-to-bangla/">Number to Bangla Docs</a></li>
 					<li><a href="">Portfolio</a></li>
 					<li><a href="">Blog</a></li>
-					<li><a href="">Laravel</a></li>
+					<li><a href="https://laravel.tecvaly.com/">বাংলায় লারাভেল শিখি</a></li>
 				</ul>
 				<span class="copy-desktop">@ Md. Rakibul Islam</span>
 			</div>
 			<div class="col-sm-4 center f-m-desktop">
 				<div class="icon-fork">
-
-					<i title="Fork this project from github!" class="fa fa-code-fork" aria-hidden="true"></i>
+					<a href="https://github.com/rakibdevs/Laravel-Portfolio-Blog">
+						<i title="Fork this project from github!" class="fa fa-code-fork" aria-hidden="true"></i>
+					</a>
 
 
 				</div>
@@ -70,7 +70,7 @@
 					<p>FOLLOW ME</p>
 					<div class="social-icons">
 					
-						<a href="https://github.com/rakibhstu" title="Find me on Github">
+						<a href="https://github.com/rakibdevs" title="Find me on Github">
 							<i class="fa fa-github" aria-hidden="true"></i>
 						</a>
 						<a href="https://bd.linkedin.com/in/rakibhstu" title="Find me on Linkedin">

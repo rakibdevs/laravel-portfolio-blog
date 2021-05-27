@@ -811,9 +811,9 @@ ul.portfolio-tech li {
 
 
 a#scroll-down {
-  position: relative;
-  top: 60px; 
-  left: 60px;
+    position: absolute;
+    bottom: 100px;
+    right: 50%;
 }
 a#scroll-down span {
   position: absolute;
@@ -898,14 +898,17 @@ a#scroll-down span::before {
 }
 @media only screen and (max-width: 480px) 
 {
+    .main-menu+hr{display: none;}
     .code-block{display: none;}
     .skill-image-banner {
         position: absolute;
-        top: 30%;
+        top: 34px;
         height: auto;
         opacity: 0.2;
-        left: -44%;
-        width: 100%;
+        left: 0;
+        width: 255px;
+        margin: auto;
+        right: 0;
     }
     .banner .row.m-0 {
         margin: 0 !important;
@@ -914,12 +917,12 @@ a#scroll-down span::before {
     section.banner, section {
         height: auto!important;
     }
-    header {
+    /*header {
         padding: 5px;
         background: #daf1ed !important;
         border-bottom: 1px solid #d1d1d1;
         height: 50px;
-    }
+    }*/
     section h3 {
         text-align: center;
     }
@@ -974,6 +977,18 @@ a#scroll-down span::before {
     .author-info {
         padding-top: 30px;
         text-align: center;
+        font-size: 13px;
+    }
+    h5, .h5 {
+        font-size: 16px;
+    }
+    .author-photo{
+        width: 200px;
+        margin: auto;
+        margin-bottom: 20px;
+    }
+    a#scroll-down{
+        display: none;
     }
     .author-photo:before{
         display: none;
@@ -983,7 +998,7 @@ a#scroll-down span::before {
         height: auto;
         border-radius: 50%;
         margin-top: 60px;
-        margin-left: 0;
+        position: initial;
     }
     .author-slogan{
         font-size: 26px;
@@ -1023,6 +1038,7 @@ a#scroll-down span::before {
     }
     .section-image {
         width: 100%;
+        position: inherit;
     }
     .feature-url {
         text-align: center;
@@ -1056,5 +1072,12 @@ a#scroll-down span::before {
     .projects-preview .row{
         margin-left: 0 !important;
         margin-right: 0 !important;
+    }
+    .git-repo{
+        padding: 20px 15px;
+        height: 220px;
+    }
+    .git-repo-parent .col-sm-4:nth-child(3n+2) {
+        margin-top: 0 !important;
     }
 }

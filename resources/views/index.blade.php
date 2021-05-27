@@ -53,12 +53,13 @@
                                 <i class="fa fa-stack-overflow" aria-hidden="true"></i>
                             </a>
                         </div>
-                        <a id="scroll-down" class="ml-3" href="#projects-preview"><span></span></a>
+                        
                     </div>
                 </div>
                 
             </div>
         </div>
+        <a id="scroll-down" class="ml-3" href="#projects-preview"><span></span></a>
     </section>
     
 @endsection

@@ -3,7 +3,7 @@
 @endphp
 <header>
 	<div class="main-container">		
-		<span class="mobile-humberger" onclick="openNav()">&#9776;</span>
+		{{-- <span class="mobile-humberger" onclick="openNav()">&#9776;</span> --}}
 		<div id="main-menu" class="main-menu">
 			<span href="javascript:void(0)" class="menu-close" onclick="closeNav()">&times;</span>
 			<li >
