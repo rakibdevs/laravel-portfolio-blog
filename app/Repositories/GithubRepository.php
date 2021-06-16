@@ -57,7 +57,6 @@ class GithubRepository
 
     public function getOwnGitRepos()
     {
-    	cache()->forget('git_repos');
         return Cache::remember('git_repos', 720 ,function () {
             $res = $this->getResponse('/repos?type=source');
             return collect($res)->sortByDesc('stargazers_count')->values();
