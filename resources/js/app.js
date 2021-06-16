@@ -30,6 +30,7 @@ Vue.component('portfolio-component', require('./components/PortfolioComponent.vu
 Vue.component('contact-form', require('./components/ContactForm.vue').default);
 Vue.component('slider-component', require('./components/SliderComponent.vue').default);
 Vue.component('resume-component', require('./components/ResumeComponent.vue').default);
+Vue.component('github-repositories', require('./components/GithubRepositories.vue').default);
 /**
  * Next, we will create a fresh Vue application instance and attach it to
  * the page. Then, you may begin adding components to this application

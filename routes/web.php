@@ -17,6 +17,7 @@ Route::get('/', 'PagesController@index')->name('home');
 Route::get('/portfolio/', 'PagesController@portfolio');
 Route::get('/portfolio/{slug}', 'PagesController@singlePortfolio');
 Route::post('/get-portfolios', 'PagesController@getPortfolios');
+Route::post('/get-github-repositories', 'PagesController@getGitRepos');
 Route::post('/message', 'PagesController@message')->name('message');
 
 Route::get('/docs/number-to-bangla', function () { 

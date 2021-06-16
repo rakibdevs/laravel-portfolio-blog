@@ -9,17 +9,6 @@
 
 @endpush
     <div class="main-container position-relative">
-        {{-- <div class="code-block">
-            
-            <span class="code-red">namespace</span> <span class="code-green">App\Models;</span><br>
-
-            <span class="code-red">use</span> Illuminate\Database\Eloquent\<span class="code-blue">Model</span>;<br><br>
-
-            <span class="code-blue">class</span> <span class="code-green">Flight</span><span class="code-red"> extends</span> <span class="code-green">Model</span><br>
-            { <br>
-                <span class="text-muted ml-4">//</span> <br>
-            }
-        </div> --}}
     </div>
     <section class="banner">
         
@@ -99,26 +88,7 @@
         </div>
 
         <div class="m-5"></div>
-        <div class="row git-repo-parent ">
-            @foreach($git_repos as $key => $repo)
-                <div class="col-sm-4">
-                    <div class="git-repo">
-                        
-                       <a class="repo-title shade-bar" href="{{$repo->svn_url}}">{{substr($repo->name,0,35)}}</a>
-                        <p class="mb-1 min-h-70">
-                            {{substr($repo->description,0,100)}}...
-                        </p>
-                        <div class="repo-analytics text-muted">
-                            <i class="fa fa-star-o"></i>&nbsp; {{$repo->stargazers_count}} &nbsp;&nbsp;&nbsp;
-                            <i class="fa fa-code-fork"></i>&nbsp; {{$repo->forks_count}}
-                        </div>
-                    </div>
-                </div>
-
-            @endforeach
-            
-            
-        </div>
+        <github-repositories></github-repositories>
         <div class="row mt-5 justify-content-center">
             <div class="col-sm-12">
                 <p class="text-center">
@@ -136,19 +106,6 @@
 @endsection
 @push('script')
     <script>
-        // initiate github calender
-        //GitHubCalendar(".calendar", "rakibdevs", { responsive: true });
-        
-        
-        /*var text2 = ["Vue.js","Javascript","MySql", "Laravel"];
-        var count = 0;
-        setInterval(() => {
-            document.getElementById('text-2-span').innerHTML= text2[count];
-            count++;
-            if(count == 4){
-                count = 0;
-            }
-        }, 7000);*/
 
         Prism.highlightAll();
 
@@ -159,15 +116,6 @@
           });
         });
 
-
-
-
-        /*var typed6 = new Typed('.code-block', {
-            strings: ['npm install^1000\n `installing components...` ^1000\n `Fetching from source...`'],
-            typeSpeed: 40,
-            backSpeed: 0,
-            loop: true
-          });*/
 
     </script>
 @endpush
