@@ -2074,24 +2074,53 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
 /* harmony default export */ __webpack_exports__["default"] = ({
   props: ['categories'],
   data: function data() {
     return {
       activeClass: '',
       id: '',
-      portfolios: this.projects
+      portfolios: this.projects,
+      isLoading: false
     };
   },
   methods: {
     filter: function filter(id) {
       var _this = this;
 
+      this.isLoading = true;
       axios.post('/get-portfolios', {
         id: id
       }).then(function (response) {
         _this.portfolios = response.data.projects;
         _this.activeClass = id;
+        _this.isLoading = false;
       })["catch"](function (error) {
         return _this.setError(error);
       });
@@ -2100,8 +2129,10 @@ __webpack_require__.r(__webpack_exports__);
   mounted: function mounted() {
     var _this2 = this;
 
+    this.isLoading = true;
     axios.post('/get-portfolios').then(function (response) {
       _this2.portfolios = response.data.projects;
+      _this2.isLoading = false;
     })["catch"](function (error) {
       return _this2.setError(error);
     });
@@ -85233,68 +85264,114 @@ var render = function() {
     ]),
     _vm._v(" "),
     _c("div", { staticClass: "col-sm-10" }, [
-      _c(
-        "div",
-        { staticClass: "row portfolio-contents" },
-        _vm._l(_vm.portfolios, function(portfolio) {
-          return _c("div", { key: portfolio.id, staticClass: "col-sm-6" }, [
-            _c(
-              "a",
-              {
-                staticClass: "row items",
-                attrs: { href: "/portfolio/" + portfolio.slug }
-              },
-              [
-                _c("div", { staticClass: "col-sm-12" }, [
-                  _c("h6", [
-                    _c("strong", [
-                      _vm._v(
-                        _vm._s(portfolio.title) +
-                          " | " +
-                          _vm._s(portfolio.category["name"])
-                      )
+      _vm.isLoading == false
+        ? _c(
+            "div",
+            { staticClass: "row portfolio-contents" },
+            _vm._l(_vm.portfolios, function(portfolio) {
+              return _c("div", { key: portfolio.id, staticClass: "col-sm-6" }, [
+                _c(
+                  "a",
+                  {
+                    staticClass: "row items",
+                    attrs: { href: "/portfolio/" + portfolio.slug }
+                  },
+                  [
+                    _c("div", { staticClass: "col-sm-12" }, [
+                      _c("h6", [
+                        _c("strong", [
+                          _vm._v(
+                            _vm._s(portfolio.title) +
+                              " | " +
+                              _vm._s(portfolio.category["name"])
+                          )
+                        ])
+                      ])
+                    ]),
+                    _vm._v(" "),
+                    _c("div", { staticClass: "project-item col-sm-8" }, [
+                      portfolio.feature_image
+                        ? _c("img", { attrs: { src: portfolio.feature_image } })
+                        : _c("img", { attrs: { src: "/images/demo.jpg" } })
+                    ]),
+                    _vm._v(" "),
+                    _c("div", { staticClass: "col-sm-4" }, [
+                      portfolio.technology
+                        ? _c(
+                            "ul",
+                            { staticClass: "portfolio-tech" },
+                            _vm._l(portfolio.technology, function(tech) {
+                              return _c("li", [
+                                _vm._v(_vm._s(tech.technology["name"]))
+                              ])
+                            }),
+                            0
+                          )
+                        : _vm._e()
+                    ]),
+                    _vm._v(" "),
+                    _c("div", { staticClass: "col-sm-12" }, [
+                      _c("p", [
+                        _vm._v(
+                          _vm._s(_vm._f("truncate")(portfolio.description, 100))
+                        )
+                      ])
                     ])
-                  ])
-                ]),
-                _vm._v(" "),
-                _c("div", { staticClass: "project-item col-sm-8" }, [
-                  portfolio.feature_image
-                    ? _c("img", { attrs: { src: portfolio.feature_image } })
-                    : _c("img", { attrs: { src: "/images/demo.jpg" } })
-                ]),
-                _vm._v(" "),
-                _c("div", { staticClass: "col-sm-4" }, [
-                  portfolio.technology
-                    ? _c(
-                        "ul",
-                        { staticClass: "portfolio-tech" },
-                        _vm._l(portfolio.technology, function(tech) {
-                          return _c("li", [
-                            _vm._v(_vm._s(tech.technology["name"]))
-                          ])
-                        }),
-                        0
-                      )
-                    : _vm._e()
-                ]),
-                _vm._v(" "),
-                _c("div", { staticClass: "col-sm-12" }, [
-                  _c("p", [
-                    _vm._v(
-                      _vm._s(_vm._f("truncate")(portfolio.description, 100))
-                    )
-                  ])
-                ])
-              ]
-            )
-          ])
-        }),
-        0
-      )
+                  ]
+                )
+              ])
+            }),
+            0
+          )
+        : _c(
+            "div",
+            { staticClass: "row portfolio-contents" },
+            _vm._l(2, function(n) {
+              return _c("div", { staticClass: "col-sm-6" }, [_vm._m(0, true)])
+            }),
+            0
+          )
     ])
   ])
 }
-var staticRenderFns = []
+var staticRenderFns = [
+  function() {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c(
+      "a",
+      { staticClass: "row items pulse-animation", attrs: { href: "#" } },
+      [
+        _c("div", { staticClass: "col-sm-12" }, [_c("h6", [_c("strong")])]),
+        _vm._v(" "),
+        _c("div", { staticClass: "project-item col-sm-8" }, [
+          _c("div", { staticClass: "h-140 bg-grey-500 rounded-border" })
+        ]),
+        _vm._v(" "),
+        _c("div", { staticClass: "col-sm-4" }, [
+          _c("ul", { staticClass: "portfolio-tech" }, [
+            _c("li", { staticClass: "h-20 w-p-70 rounded-border bg-grey-500" }),
+            _vm._v(" "),
+            _c("li", { staticClass: "h-20 w-p-50 rounded-border bg-grey-500" }),
+            _vm._v(" "),
+            _c("li", { staticClass: "h-20 w-p-60 rounded-border bg-grey-500" })
+          ])
+        ]),
+        _vm._v(" "),
+        _c("div", { staticClass: "col-sm-12 pt-2" }, [
+          _c("p", {
+            staticClass: "h-20 w-100 rounded-border bg-grey-500 mb-1"
+          }),
+          _vm._v(" "),
+          _c("p", {
+            staticClass: "h-20 w-p-80 rounded-border bg-grey-500 mb-0"
+          })
+        ])
+      ]
+    )
+  }
+]
 render._withStripped = true
 
 
